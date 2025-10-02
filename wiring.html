@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiring & Rangkaian - Project IoT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-background">
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">IoT Pendeteksi Suhu dan Temperatur Udara</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Penjelasan ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="project.html">Tentang Project</a></li>
+                        <li><a href="hardware.html">Hardware</a></li>
+                        <li><a href="wiring.html">Wiring</a></li>
+                        <li><a href="software.html">Software</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="about.html" class="nav-link">Tentang Kami</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-page">
+        <div class="container">
+            <section class="content-section">
+                <h1>Penjelasan Wiring atau Rangkaian</h1>
+                <img src="images/wiring-diagram.jpg" alt="Diagram Rangkaian Proyek" class="content-image">
+                
+                <article class="component-detail">
+                    <h2>Sensor DHT11 → ESP-12E</h2>
+                    <ul>
+                        <li><b>VCC DHT11</b> → <b>3.3V ESP-12E</b> (atau 5V jika modul DHT11 mendukung)</li>
+                        <li><b>GND DHT11</b> → <b>GND ESP-12E</b></li>
+                        <li><b>DATA DHT11</b> → <b>GPIO2 / D4</b> di ESP-12E</li>
+                    </ul>
+                    <p><b>Penting:</b> Tambahkan resistor pull-up 10kΩ antara pin DATA dan VCC agar sinyal data lebih stabil.</p>
+                </article>
+
+                <article class="component-detail">
+                    <h2>LCD 16x2 I2C → ESP-12E</h2>
+                     <ul>
+                        <li><b>VCC LCD</b> → <b>5V ESP-12E</b> (atau sumber eksternal 5V, tetap hubungkan GND bersama)</li>
+                        <li><b>GND LCD</b> → <b>GND ESP-12E</b></li>
+                        <li><b>SDA LCD</b> → Pin <b>SDA</b> ESP-12E (<b>GPIO4 / D2</b>)</li>
+                        <li><b>SCL LCD</b> → Pin <b>SCL</b> ESP-12E (<b>GPIO5 / D1</b>)</li>
+                    </ul>
+                </article>
+
+            </section>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

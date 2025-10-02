@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek Monitoring Suhu & Kelembaban IoT</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">IoT Pendeteksi Suhu dan Temperatur Udara</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Penjelasan ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="project.html">Tentang Project</a></li>
+                        <li><a href="hardware.html">Hardware</a></li>
+                        <li><a href="wiring.html">Wiring</a></li>
+                        <li><a href="software.html">Software</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="about.html" class="nav-link">Tentang Kami</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="slider-container">
+            <h1 class="slider-title" id="slider-title-text"></h1>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-title="Penjelasan Project Kami">
+                        <a href="project.html"><img src="images/slider-project.jpg" alt="Ilustrasi Proyek IoT"></a>
+                    </div>
+                    <div class="swiper-slide" data-title="Komponen Hardware">
+                        <a href="hardware.html"><img src="images/slider-hardware.jpg" alt="Komponen Hardware"></a>
+                    </div>
+                    <div class="swiper-slide" data-title="Rangkaian & Wiring">
+                        <a href="wiring.html"><img src="images/slider-wiring.jpg" alt="Diagram Wiring"></a>
+                    </div>
+                    <div class="swiper-slide" data-title="Penggunaan Software">
+                        <a href="software.html"><img src="images/slider-software.jpg" alt="Tampilan Software"></a>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
